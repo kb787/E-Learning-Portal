@@ -1,0 +1,14 @@
+.adminLogin {
+    background-color:rgba(64, 64, 64, 1) ;
+    height:45vw ;
+    width:35vw ;
+  }
+
+.adminLoginForm {
+    background-color: black;
+}  
+
+.loginInput {
+  width:25vw ;
+  font-size:1.5vw ;
+}

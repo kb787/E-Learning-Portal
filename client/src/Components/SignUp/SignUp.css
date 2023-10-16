@@ -1,0 +1,16 @@
+.signUp-container{
+    height: 700px;
+}
+
+.signupLinking{
+    text-decoration: none;
+    color:yellow ; 
+}
+
+.signupLinking:hover {
+    color:yellow ;
+}
+
+.redirect{
+    color:yellow ;
+}

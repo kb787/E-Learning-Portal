@@ -1,0 +1,116 @@
+.Service_section {
+    padding: 30px;
+}
+
+.service_title {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.service_description {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.service_cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px
+}
+.service_icon_title>img{
+    height: 100px;
+}
+.service_card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0px 0px 2px solid;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    padding: 30px;
+    width: 300px;
+}
+
+.service_icon_title {
+    display: flex;
+    align-items: center;
+}
+
+.service_card_btn>button{
+    background-color: #0594e1;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 7px;
+}
+
+.Service_section {
+    padding: 30px;
+    background-color: black ;
+    margin-top:-2.5vw ;
+}
+
+.service_title {
+    text-align: center;
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: bold; /* Add bold font weight */
+    color:yellow; /* Change text color */
+}
+
+.service_description {
+    text-align: center;
+    margin-bottom: 20px; /* Reduce margin */
+    font-size: 1.2rem; /* Adjust font size */
+    color: #777; /* Change text color */
+}
+
+.service_cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Reduce the gap between cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+}
+
+.service_card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduce the gap between card elements */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Enhance the box-shadow */
+    padding: 20px;
+    width: 300px;
+    background-color: #fff; /* Add a white background */
+    border-radius: 10px; /* Add rounded corners */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service_card:hover {
+    transform: translateY(-5px); /* Add a slight lift on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.service_icon_title > svg {
+    height: 60px; /* Adjust the icon height */
+    width: 60px; /* Adjust the icon width */
+    color: #0594e1; /* Change icon color */
+}
+
+.service_icon_title > span {
+    font-size: 1.2rem; /* Adjust font size */
+    font-weight: bold; /* Add bold font weight */
+    margin-left: 10px; /* Add some space between icon and text */
+    color: #333; /* Change text color */
+}
+
+.service_card_btn > button {
+    background-color: #0594e1;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Slightly reduce padding */
+    border-radius: 7px;
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.2s;
+}
+
+.service_card_btn > button:hover {
+    background-color: #0579c1; /* Change button color on hover */
+}

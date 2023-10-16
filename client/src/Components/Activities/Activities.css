@@ -1,0 +1,63 @@
+.activities_section {
+    padding: 30px;
+}
+
+.activities_content {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.activities_content>h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.activities_content>button {
+    width: fit-content;
+    padding: 15px 20px;
+    margin-top: 20px;
+    color: #0594e1;
+    background-color: #fff;
+}
+
+.activities_hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+
+}
+
+.activities_img {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.activities_img>div {
+    background-color: lightgray;
+}
+
+.activities_content {
+    padding-left: 30px;
+}
+
+.activities_category_card_container{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: 10px;
+}
+.Book_container>img{
+    height: 100%;
+}
+.Book_container{
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+}

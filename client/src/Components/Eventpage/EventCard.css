@@ -1,0 +1,52 @@
+/* Style for the card container */
+.EventPage_card {
+    display: flex;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: black;
+    border-radius: 5px;
+    flex-direction: column;
+    border:solid ;
+    border-color:darkgray ;
+    color:yellow ;
+    margin-bottom:4vw ;
+}
+
+/* Style for the card image */
+.EventPage_card_img > img {
+    max-width: 100%;
+    height: auto;
+}
+
+.EventPage_card_img {
+    width: auto;
+    background-color: aquamarine;
+    height: 200px;
+    margin: 10px;
+}
+
+/* Style for the card content */
+.EventPage_card_content {
+    padding: 15px;
+}
+
+/* Style for the card title */
+.EventPage_card_title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style for the card description */
+.EventPage_card_description {
+    font-size: 1em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+/* Style for the card ratings (Time and Venue) */
+.EventPage_card_rating {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}

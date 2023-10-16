@@ -1,0 +1,37 @@
+
+.CoursesList_card_container{
+  display: flex;
+  justify-content: center;
+  margin-left:-3vw ;
+}
+
+.CoursesList{
+  padding: 30px;
+}
+
+
+.CoursesList_title{
+  color: whitesmoke;
+}
+
+.CoursesList_content{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding:40px 40px ;
+}
+
+.Courses_short_description{
+  font-size: 35px;
+  color:whitesmoke ;
+}
+
+.Courses_description {
+   color:whitesmoke ;
+}
+
+.CoursesList_container{
+  background-color:rgba(64, 64, 64, 1) ;
+  margin-left:-5vw ;
+  margin-top:-2.5vw ;
+}

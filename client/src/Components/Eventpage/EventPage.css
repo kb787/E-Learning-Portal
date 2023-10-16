@@ -1,0 +1,49 @@
+/* Styles for the EventPage section */
+.event_section {
+    padding: 30px;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Background color or image */
+    background-size: cover;
+  }
+  
+  /* Styles for the event headline */
+  .event_headline {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .event_headline h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: white; /* Adjust the headline text color */
+  }
+  
+  .event_headline p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white; /* Paragraph text color */
+  }
+  
+  /* Styles for the event card container */
+  .event_card_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Spacing between event cards */
+    justify-content: center;
+    padding: 20px; /* Add some padding for better spacing */
+    background-color: transparent; /* Transparent background */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  .event_container {
+     background-color:rgba(64, 64, 64, 1) ;
+     color:white ;
+     margin-top:-2.5vw ;
+     margin-left:-2.5vw ;
+     margin-right:-2.5vw ;
+
+  }
+  

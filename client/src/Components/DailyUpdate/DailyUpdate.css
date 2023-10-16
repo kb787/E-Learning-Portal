@@ -1,0 +1,88 @@
+/* Styles for the Daily Update section */
+.dailyupdate_section {
+    padding: 30px;
+    background-color: #f0f0f0; /* Background color or image */
+    background-size: cover;
+  }
+  
+  /* Styles for headings and text */
+  .dailyupdate_heading {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .dailyupdate_heading h1 {
+    font-family: 'YourFont', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+  }
+  
+  .dailyupdate_heading p {
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  /* Styles for the Swiper content */
+  .dailyupdate_content_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+  
+  .daily_swiper_content {
+    max-width: 1000px;
+    width: 100%;
+    min-width: 300px;
+    height: 450px;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for image containers */
+  .img_div {
+    background: #fff; /* Image container background color */
+    height: 400px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Styles for top news cards */
+  .Top_news_card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Spacing between news cards */
+    justify-content: center;
+  }
+
+/* Styles for image containers */
+.img_div {
+  background: #fff; /* Image container background color */
+  height: 400px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.img_div img {
+  object-fit: cover; /* Stretch the image to cover the entire container */
+  width: 100%; /* Ensure the image takes up 100% of the container's width */
+  height: 100%; /* Ensure the image takes up 100% of the container's height */
+}
+
+.dailyupdate_container {
+  background-color:rgba(64, 64, 64, 1) ;
+  color:yellow ;
+  margin-left:-3vw ;
+  margin-right:-2.5vw ;
+  margin-top:-2.5vw;
+}
+
+.silder_content{
+   color:white ;
+} 
