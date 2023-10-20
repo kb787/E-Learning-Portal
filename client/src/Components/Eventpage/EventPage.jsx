@@ -1,12 +1,12 @@
 import React from 'react'
 import './EventPage.css'
 import EventCard from './EventCard' 
-import NavBar from '../NavBar/NavBar' 
+import NavBarContent from '../NavBar/NavBarContent'
 import Footer from '../Home/components/Footer'
 const EventPage = () => {
   return (
     <>
-    <NavBar />
+    <NavBarContent />
     <section className='event_section'>
         <div className="event_container">
             <div className="event_headline">

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './Courses.css' 
-import NavBar from '../NavBar/NavBar'
+import NavBarContent from '../NavBar/NavBarContent'
 import Footer from '../Home/components/Footer'
+import Button from 'react-bootstrap/Button';
+
 const Courses = () => {
 
   const [MainData, setMainData] = useState([])
@@ -61,7 +63,7 @@ const Courses = () => {
 }
   return (
     <>
-     <NavBar />
+     <NavBarContent />
       <section>
         <div className="aptitude_Main">
           <h1 className='aptitude_heading'></h1>
@@ -148,6 +150,8 @@ const Courses = () => {
                               {data.courseDescription}
                             </div>
                             <div className='Courses_card_rating'>{data.courseRating}</div>
+                            <br/>
+                            <Button variant="primary" className = 'courseListButton'>Explore More</Button>
                           </div>
                         </div>
                       )

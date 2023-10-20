@@ -10,11 +10,13 @@ import Activities from './Components/Activities/Activities'
 import DailyUpdate from './Components/DailyUpdate/DailyUpdate'
 import Footer from './Components/Home/components/Footer'
 import EventPage from './Components/Eventpage/EventPage' 
-import NewEvent from './Components/Eventpage/NewEvent'
+import NewEvent from './Components/Admin/NewEvent'
 import SelectMeeting from './Components/VideoConference/SelectMeeting'
 import VideoConference from './Components/VideoConference/VideoConference'
 import AdminLogin from './Components/Admin/AdminLogin'
-import AdminPage from './Components/Admin/AdminPage'
+import AdminPage from './Components/Admin/AdminPage' 
+import NewVideos from './Components/Admin/NewVideos' 
+import Course1 from './CourseDetail/Course1'
 
 
 const App = () => {
@@ -31,11 +33,12 @@ const App = () => {
           <Route path='/dailyupdates' element={<DailyUpdate/>}/>
           <Route path='/events' element={<EventPage/>}/>
           <Route path='/newevent' element={<NewEvent/>}/>
+          <Route path='/newvideo' element={<NewVideos/>}/>
           <Route path='/videoconference/:roomId' element={<VideoConference/>}/>
           <Route path='/selectmentor' element={<SelectMeeting/>}/>
           <Route path='/adminlogin' element={<AdminLogin/>}/>
           <Route path='/adminpage' element={<AdminPage/>}/>
-
+          <Route path='/course1' element={<Course1/>}/>
         </Routes>
       </BrowserRouter>
     </>

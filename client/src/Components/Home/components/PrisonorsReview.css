@@ -115,7 +115,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 30px;
     border-bottom: 2px solid #e2e2e2;
     background-color: black;
 
@@ -149,6 +148,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
+    color:yellow ;
 }
 
 .AboutUs_team_card {
@@ -157,6 +158,8 @@
     align-items: center;
     justify-content: center;
     padding: 30px;
+    background-color: black;
+    color:yellow ;
 }
 
 .AboutUs_team_img>img {
@@ -168,11 +171,14 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-color: black;
+    color:yellow ;
 }
 
-.AboutUs_team_title>h1 {
+.AboutUs_team_title  {
     font-size: 42px;
     font-weight: 700;
+    color:yellow ;
 }
 
 .AboutUs_team_title>p {
@@ -184,7 +190,7 @@
 .AboutUs_team_header>p {
     font-size: 1.125rem;
     line-height: 1.75rem;
-    color: rgb(166 166 166);
+    color: yellow ;
 }
 
 .AboutUs_slider {
@@ -201,6 +207,12 @@
     left: -60px;
     top: -50px;
 }
+
+.PrisonersReview{
+    background-color: black;
+    color:yellow ;
+    margin-top:-7vw ;
+} 
 
 
 /*=============== BREAKPOINTS ===============*/
@@ -242,7 +254,8 @@
     }
 
     .AboutUs_team_content{
-        padding: 5px;
+        background-color: black;
+        color:yellow
     }
 
     .AboutUs_team_title>h1{
@@ -287,12 +300,14 @@
 
 /* Swiper Container */
 .Prisoners_review_container {
-    margin-top: 2rem; /* Add some top margin for spacing */
+    margin-top: 2rem;
+  /* Add some top margin for spacing */
 }
 
 /* Swiper Slide Card */
 .AboutUs_team_card {
-    background-color: #fff; /* Set a white background color */
+    background-color: black;
+    color:yellow ; /* Set a white background color */
     border-radius: 10px; /* Add rounded corners */
     padding: 2rem; /* Add padding for spacing */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */

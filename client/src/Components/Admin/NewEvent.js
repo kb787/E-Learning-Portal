@@ -3,6 +3,9 @@ import { Link, useNavigate } from 'react-router-dom' ;
 import axios from 'axios' ;
 import {message} from 'antd' ;
 import {useState} from 'react' ;
+import AdminNav from './AdminNav';
+import Footer from '../Home/components/Footer';
+
 
 const NewEvent = () => {
 
@@ -29,7 +32,7 @@ const NewEvent = () => {
             if(postResponse.data && postResponse.data.success)
             {
                 message.success(" Successfully booked the event ") ;
-                navigate("/") ;
+                navigate("/adminpage") ;
             }
         } 
 
@@ -42,6 +45,8 @@ const NewEvent = () => {
 
 
   return (
+   <div className = "NewEvent">
+    <AdminNav/>
     <section className="custom-container signUp-container forms">
       <div className="custom-form login">
         <div className="custom-form-content">
@@ -90,6 +95,8 @@ const NewEvent = () => {
         </div>
       </div>
     </section>
+    <Footer/>
+    </div> 
   )
 }
 

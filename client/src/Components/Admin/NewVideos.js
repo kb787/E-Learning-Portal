@@ -2,7 +2,9 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { message } from 'antd';
-import { useState } from 'react'
+import { useState } from 'react';
+import AdminNav from './AdminNav';
+import Footer from '../Home/components/Footer';
 
 const NewVideos = () => {
   
@@ -42,6 +44,8 @@ const NewVideos = () => {
 
 
   return (
+    <div className='NewVideos'>
+    <AdminNav/>  
     <section className="custom-container signUp-container forms">
       <div className="custom-form login">
         <div className="custom-form-content">
@@ -49,7 +53,7 @@ const NewVideos = () => {
             <div className="field input-field login">
               <input type="text"
                 placeholder="Url"
-                className="input login"
+                className="formInput"
                 value={courseUrl}
                 onChange={(e) => setCourseUrl(e.target.value)}
                 required />
@@ -57,7 +61,7 @@ const NewVideos = () => {
             <div className="field input-field login">
               <input type="text"
                 placeholder="Title"
-                className="input login"
+                className="formInput"
                 value={courseTitle}
                 onChange={(e) => setCourseTitle(e.target.value)}
               />
@@ -66,7 +70,7 @@ const NewVideos = () => {
               <input
                 type="text"
                 placeholder="Description"
-                className="password login"
+                className="formInput"
                 required
                 value={courseDescription}
                 onChange={(e) => setCourseDescription(e.target.value)}
@@ -76,7 +80,7 @@ const NewVideos = () => {
               <input
                 type="text"
                 placeholder="Category"
-                className="password login"
+                className="formInput"
                 required
                 value={courseCategory}
                 onChange={(e) => setCourseCategory(e.target.value)}
@@ -86,7 +90,7 @@ const NewVideos = () => {
               <input
                 type="text"
                 placeholder="Sub Category"
-                className="password login"
+                className="formInput"
                 required
                 value={courseSubCategory}
                 onChange={(e) => setCourseSubCategory(e.target.value)}
@@ -96,7 +100,7 @@ const NewVideos = () => {
               <input
                 type="text"
                 placeholder="Rating"
-                className="password login"
+                className="formInput"
                 required
                 value={courseRating}
                 onChange={(e) => setCourseRating(e.target.value)}
@@ -109,6 +113,8 @@ const NewVideos = () => {
         </div>
       </div>
     </section>
+    <Footer/>
+    </div>
   )
 }
 

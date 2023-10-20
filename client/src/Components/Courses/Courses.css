@@ -282,6 +282,20 @@
     animation: prixClipFix 2s linear infinite;
 }
 
+.courseListButton {
+    width:10vw ;
+    margin-left:2.5vw ;
+    font-size:1.45vw ;
+    background-color: rgba(4,59,92,1);
+    color:white ;
+    margin-bottom:2vw ;
+    border-radius:0.35rem ;
+}
+
+.courseListButton:hover {
+     transform:scale(1.15) ;
+     transform:scale(1.15) ;
+}
 @keyframes rotate {
     100% {
         transform: rotate(360deg)

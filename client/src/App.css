@@ -37,4 +37,57 @@
   }
 }
 
+.AdminNav{
+   background-color: black;
+   color:yellow ;
+   height:6vw ; 
+}
+
+.navSet {
+  display:flex ;
+  list-style-type:none ;
+  gap:2vw ;
+  margin-left:35vw ;
+  margin-right:20vw ;
+  margin-top:-2.5vw ;
+}
+
+.navSetItem {
+  font-size:1.45vw ;
+  font-style: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.navSetItemLogo 
+{
+   font-size:2vw ; 
+   padding-top:2vw ;
+   padding-left:2.5vw ;
+}
+
+.AdminDash {
+  background-color:rgba(64, 64, 64, 1) ; ;
+  color:white ;
+  height:45vw ;
+}
+
+.contentCardSet {
+  display:flex ;
+  gap:5vw ;
+  list-style-type:none ;
+}
+
+.dashboardImage {
+  padding-top:3vw ;
+  width:35vw ;
+  height:35vw ;
+  border-radius:95% ;
+}
+
+.adminlinking {
+  color:yellow ;
+  text-decoration: none;
+}
+
 

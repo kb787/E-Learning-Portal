@@ -13,7 +13,6 @@ const HomePage = () => {
             <Herosection/>
             <PlatformServices/>
             <CoursesList/>
-            <PrisonersReview/>
             <Footer />
         </>
     )

@@ -9,7 +9,8 @@ import { Autoplay } from 'swiper/modules'
 
 const PrisonersReview = () => {
     return (
-        <>
+        <> 
+           <div className = "PrisonersReview">
             <div className="AboutUs_Team_container">
                 <div className='gredient_ball'></div>
                 <div className="AboutUs_team_content">
@@ -37,10 +38,10 @@ const PrisonersReview = () => {
                 </div>
                 <div className="AboutUs_team_header">
                     <div className='AboutUs_team_title'>
-                        <h1>John Smith</h1>
-                        <p>⭐⭐⭐⭐⭐</p>
+                        <h1 className='reviewHeading'>John Smith</h1>
+                        <p className = 'reviewPara'>⭐⭐⭐⭐⭐</p>
                     </div>
-                    <p>Prisoner E-Learning Platform has transformed my life. The courses are engaging, and I've acquired valuable skills that give me hope for a better future. Highly recommended!</p>
+                    <p className = 'reviewPara'>Prisoner E-Learning Platform has transformed my life. The courses are engaging, and I've acquired valuable skills that give me hope for a better future. Highly recommended!</p>
                 </div>
             </div>
         </div>
@@ -53,10 +54,10 @@ const PrisonersReview = () => {
                 </div>
                 <div className="AboutUs_team_header">
                     <div className='AboutUs_team_title'>
-                        <h1>Lisa Johnson</h1>
-                        <p>⭐⭐⭐⭐⭐</p>
+                        <h1 className ='reviewHeading'>Lisa Johnson</h1>
+                        <p className = 'reviewPara'  >⭐⭐⭐⭐⭐</p>
                     </div>
-                    <p>I'm incredibly grateful for the Prisoner E-Learning Platform. It's given me a chance to learn, grow, and prepare for a brighter future while serving my time. The courses are fantastic!</p>
+                    <p className = 'reviewPara'>I'm incredibly grateful for the Prisoner E-Learning Platform. It's given me a chance to learn, grow, and prepare for a brighter future while serving my time. The courses are fantastic!</p>
                 </div>
             </div>
         </div>
@@ -69,16 +70,17 @@ const PrisonersReview = () => {
                 </div>
                 <div className="AboutUs_team_header">
                     <div className='AboutUs_team_title'>
-                        <h1>David Brown</h1>
-                        <p>⭐⭐⭐⭐⭐</p>
+                        <h1 className = 'reviewHeading' >David Brown</h1>
+                        <p className = 'reviewPara'>⭐⭐⭐⭐⭐</p>
                     </div>
-                    <p>Prisoner E-Learning Platform is a game-changer. The courses are informative, and they've helped me gain valuable skills and knowledge. It's a step towards rehabilitation.</p>
+                    <p className = 'reviewPara'>Prisoner E-Learning Platform is a game-changer. The courses are informative, and they've helped me gain valuable skills and knowledge. It's a step towards rehabilitation.</p>
                 </div>
             </div>
         </div>
     </SwiperSlide>
 </Swiper>
                 </div>
+            </div>
             </div>
         </>
     )

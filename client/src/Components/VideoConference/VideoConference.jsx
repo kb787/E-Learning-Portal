@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import {ZegoUIKitPrebuilt} from '@zegocloud/zego-uikit-prebuilt'
-import NavBar from '../NavBar/NavBar' 
+import NavBarContent from '../NavBar/NavBarContent'
 import Footer from '../Home/components/Footer'
 const VideoConference = () => {
     const { roomId } = useParams()
@@ -22,7 +22,7 @@ const VideoConference = () => {
 
     return (
       <>  
-       <NavBar /> 
+       <NavBarContent /> 
         <div className='videoConference_container'>
             <div ref={mymeeting}/>
         </div>

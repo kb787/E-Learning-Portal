@@ -3,12 +3,12 @@ import './DailyUpdate.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules'
 import NewsCard from './NewsCard'
-import NavBar from '../NavBar/NavBar';
+import NavBarContent from '../NavBar/NavBarContent';
 import Footer from '../Home/components/Footer';
 const DailyUpdate = () => {
   return (
     <>
-    <NavBar />
+    <NavBarContent />
       <section className='dailyupdate_section'>
         <div className="dailyupdate_container">
           <div className="dailyupdate_heading">

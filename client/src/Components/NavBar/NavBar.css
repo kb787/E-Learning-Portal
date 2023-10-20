@@ -53,9 +53,24 @@
     align-items: center;
 }
 
+.nav_lists_content {
+  display: flex;
+  gap: 30px;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  list-style: none;
+  align-items: center;
+  margin-right:20vw ;
+}
+
 .nav_lists a{
     text-decoration: none;
     color: yellow;
+}
+
+.nav_lists_content a{
+  text-decoration: none;
+  color: yellow;
 }
 
 .btn_div {
@@ -77,6 +92,10 @@
     border-radius: 0.375rem;
     cursor: pointer;
     border-color: #0594e1;
+}
+
+.nav_menu_content {
+    margin-left:-15vw ;
 }
 
 .nav_btn_login {
@@ -171,6 +190,7 @@
   .Profile_pop_flex>i{
     font-size: 25px;
   }
+
   
   .nav_user_info_flex{
     display: flex;
@@ -183,6 +203,14 @@
     align-items: center;
     margin-left: 86px;
     gap: 10px;
+  }
+
+  .navContentList{
+    list-style-type:none ;
+    color:yellow ;
+    list-style-type:none ;
+    font-size:1.125vw ;
+    text-decoration:none ;
   }
 
 /*=============== BREAKPOINTS ===============*/
