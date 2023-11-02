@@ -37,17 +37,17 @@ const Courses = () => {
   const [dropdownOption, setdropdownOption] = useState({
   })
 
-  const [selectedSubtopic, setSelectedSubtopic] = useState({
-  })
+ // const [selectedSubtopic, setSelectedSubtopic] = useState({
+ //  })
 
-  const difficultyoptions = ["Easy", "Medium", "Hard"]
+//  const difficultyoptions = ["Easy", "Medium", "Hard"]
   const sotrtBy = ["A-Z", "Number"]
-  const generalAptitudeSubtopics = [
-  ];
-  const programmingSubtopics = [
-  ];
-  const LogicalSubtopics = [
-  ];
+//  const generalAptitudeSubtopics = [
+//  ];
+//  const programmingSubtopics = [
+//  ];
+//  const LogicalSubtopics = [
+//  ];
 
   const handleSearchInput = async (topic) => {
     try {
@@ -92,14 +92,15 @@ const Courses = () => {
               <div className="category_container">
                 <h3 className='category_heading'>Category</h3>
                 <ul className='category_ul'>
-                  <li className='category_li' onClick={()=> handleSearchInput('Vocational Training')}>Vocational Training</li>
-                  <li className='category_li' onClick={()=> handleSearchInput('Finacial Management')}>Finacial Management<i className={`bx bx-chevron-down ${dropdownOption["General Aptitude"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
-                  <li className='category_li' onClick={()=> handleSearchInput('Mental Health')} >Mental Health<i className={`bx bx-chevron-down ${dropdownOption["Programming"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
-                  <li className='category_li' onClick={()=> handleSearchInput('Spritual Content')} >Spritual Content<i className={`bx bx-chevron-down ${dropdownOption["Verbal"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
-                  <li className='category_li' onClick={()=> handleSearchInput('Legal education')} >Legal education<i className={`bx bx-chevron-down ${dropdownOption["Logical Reasoning"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
-                  <li className='category_li' onClick={()=> handleSearchInput('Civic education')} >Civic education<i className={`bx bx-chevron-down ${dropdownOption["Logical Reasoning"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
-                  <li className='category_li' onClick={()=> handleSearchInput('Family and RelationShip')} >Family and RelationShip<i className={`bx bx-chevron-down ${dropdownOption["Logical Reasoning"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
-                  <li className='category_li' onClick={()=> handleSearchInput('Family and RelationShip')} >General<i className={`bx bx-chevron-down ${dropdownOption["Logical Reasoning"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                 <li className='category_li' onClick={()=> handleSearchInput('General')}>General<i className={`bx bx-chevron-down ${dropdownOption["Soft Skills"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                  <li className='category_li' onClick={()=> handleSearchInput('Soft Skills')}>Soft Skills<i className={`bx bx-chevron-down ${dropdownOption["Soft Skills"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                  <li className='category_li' onClick={()=> handleSearchInput('Finacial Management')}>Financial Management<i className={`bx bx-chevron-down ${dropdownOption["Financial Management"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                {/*  <li className='category_li' onClick={()=> handleSearchInput('Mental Health')} >Mental Health<i className={`bx bx-chevron-down ${dropdownOption["Programming"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                  <li className='category_li' onClick={()=> handleSearchInput('Spritual Content')} >Spritual Content<i className={`bx bx-chevron-down ${dropdownOption["Verbal"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li> */}
+                  <li className='category_li' onClick={()=> handleSearchInput('Trade Skills')} >Trade Skills<i className={`bx bx-chevron-down ${dropdownOption["Trade Skills"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                  <li className='category_li' onClick={()=> handleSearchInput('Basic Computer')} >Basic Computer<i className={`bx bx-chevron-down ${dropdownOption["Basic Computer"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                  <li className='category_li' onClick={()=> handleSearchInput('English Speaking')} >English Speaking<i className={`bx bx-chevron-down ${dropdownOption["English Speaking"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                {/*  <li className='category_li' onClick={()=> handleSearchInput('Family and RelationShip')} >General<i className={`bx bx-chevron-down ${dropdownOption["Logical Reasoning"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>*/}
                 </ul>
               </div>
             </div>
@@ -116,11 +117,13 @@ const Courses = () => {
                     <img src="/static/media/close.6f8b0621c325d307e9d486f8740d96b4.svg" alt="" width="25"></img>
                   </div>
                   <ul className='category_ul'>
-                    <li className='category_li' >ALL</li>
-                    <li className='category_li' >General Aptitude <i className={`bx bx-chevron-down ${dropdownOption["General Aptitude"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
-                    <li className='category_li'>Programming <i className={`bx bx-chevron-down ${dropdownOption["Programming"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
-                    <li className='category_li' >Verbal  <i className={`bx bx-chevron-down ${dropdownOption["Verbal"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
-                    <li className='category_li' >Logical Reasoning  <i className={`bx bx-chevron-down ${dropdownOption["Logical Reasoning"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                    <li className='category_li' >General<i className={`bx bx-chevron-down ${dropdownOption["General"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                    <li className='category_li'>Soft Skills<i className={`bx bx-chevron-down ${dropdownOption["Soft Skills"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                    <li className='category_li' >Financial Management<i className={`bx bx-chevron-down ${dropdownOption["Financial Management"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                    <li className='category_li' >Trade Skills<i className={`bx bx-chevron-down ${dropdownOption["Trade Skills"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                    <li className='category_li' >Basic Computer<i className={`bx bx-chevron-down ${dropdownOption["Basic Computer"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+                    <li className='category_li' >English Speaking<i className={`bx bx-chevron-down ${dropdownOption["English Speaking"] ? 'ArrowRotate' : ''}`} id="inputArrow"></i></li>
+
                   </ul>
                 </div>
               </div>

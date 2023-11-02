@@ -24,9 +24,6 @@ const EventCard = () => {
             {
                 data.map((data) => (
                     <div className="EventPage_card" key={data._id}>
-                        <div className="EventPage_card_img">
-                            <img src="" alt="Event 1" />
-                        </div>
                         <div className="EventPage_card_content">
                             <div className="EventPage_card_title">{data.eventTitle}</div>
                             <div className="EventPage_card_description">

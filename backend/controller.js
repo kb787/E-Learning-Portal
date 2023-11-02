@@ -1,6 +1,9 @@
 var userProfileModel = require('./userProfileModel');
 var teacherVideoModel = require('./teacherVideoModel');
 var eventModel = require('./eventModel');
+var courseDetailModel = require('./courseDetailModel') ;
+var courseQuizModel = require('./courseQuizModel') ;
+
 var express = require('express');
 const handleUserProfile = async (req, res) => {
     const { userName, userEmailAddress, userPassword, userAge, userAreaofInterest } = req.body;
@@ -65,6 +68,29 @@ const getAllVideoCourse = async (req, res) => {
     }
   };
   
+const getMyCourseDetails = async(req,res) => {
+   const {courseDomain,courseHeading,courseParagraph,courseVideoLink} = req.body ;
+   try {
+       var myCourseDetails = await courseDetailModel.find({courseDomain:req.body.courseDomain}) ;
+       return res.status(200).send({message:"Object reqcieved",success:true,myCourseDetails}) ;
+   }
+   catch(error){
+       return res.status(500).send({message:"Unable to get the object",success:false}) ;
+   }
+}  
+
+const getMyQuiz = async(req,res) => {
+   const {courseDomain,courseQuizQuestions,courseQuizOptions,courseQuizAnswers} = req.body ;
+   try {
+       var myQuizObject = await courseQuizModel.find({
+           courseDomain:req.body.courseDomain
+       })
+       return res.status(200).send({message:"Successfully got the object",success:true,myQuizObject}) ;
+   }
+   catch(error) {
+      return res.status(500).send({message:"Could not get the object",success:false}) ;
+   } 
+}
 
 const handleEventPosting = async (req, res) => {
     const { eventTitle, eventDescription, eventVenue, eventTimings } = req.body;
@@ -158,18 +184,22 @@ var videoPostingRouter = express.Router();
 var eventPostingRouter = express.Router();
 var adminLoginRouter = express.Router();
 var videoGetRouter = express.Router() ;
-var searchRouter = express.Router()
-var subtopicRouter = express.Router()
-var eventRouter = express.Router()
+var searchRouter = express.Router() ;
+var subtopicRouter = express.Router() ;
+var eventRouter = express.Router() ;
+var courseDetailRouter = express.Router() ;
+var courseQuizRouter = express.Router() ;
 
 userProfileRouter.post('/postUserProfile', handleUserProfile);
 userLoginRouter.post('/postUserLogin', handleUserLogin);
 videoPostingRouter.post('/postNewVideo', handleVideoPosting);
 eventPostingRouter.post('/postNewEvent', handleEventPosting);
 adminLoginRouter.post('/postAdminLogin', handleAdminLogin);
-videoGetRouter.get('/getAllVideos', getAllVideoCourse)
-searchRouter.get('/search/:topic' ,getSearchTopic)
-subtopicRouter.get('/filter/:subtopic' ,getSubtopic)
-eventRouter.get('/event/getAllevent' , getEventInfo)
+videoGetRouter.get('/getAllVideos', getAllVideoCourse) ;
+searchRouter.get('/search/:topic' ,getSearchTopic) ;
+subtopicRouter.get('/filter/:subtopic' ,getSubtopic) ;
+eventRouter.get('/event/getAllevent' , getEventInfo) ;
+courseDetailRouter.get('/getCourseDetail',getMyCourseDetails) ;
+courseQuizRouter.get('/getCourseQuiz',getMyQuiz) ;
 
-module.exports = { userProfileRouter, userLoginRouter,subtopicRouter , eventRouter ,videoPostingRouter, videoGetRouter ,searchRouter ,   eventPostingRouter, adminLoginRouter };
+module.exports = { userProfileRouter, userLoginRouter,subtopicRouter , eventRouter ,videoPostingRouter, videoGetRouter ,searchRouter ,   eventPostingRouter, adminLoginRouter ,courseDetailRouter,courseQuizRouter };

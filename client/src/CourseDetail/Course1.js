@@ -7,7 +7,7 @@ const Course1 = () => {
         <div className = "Course1"> 
         <NavBarContent/>
         <div className = "courseDetailPage">
-            <h1>Hello</h1>
+
         </div>
         <Footer/>
         </div>

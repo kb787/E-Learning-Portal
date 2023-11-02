@@ -6,11 +6,11 @@ var quizSchema  = mongoose.Schema({
      } ,
 
      courseQuizQuestions : {
-        type:String ,
+        type:Array ,
      } ,
 
      courseQuizOptions : {
-        type:String ,
+        type:Array ,
      }
        ,
 

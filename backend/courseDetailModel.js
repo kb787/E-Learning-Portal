@@ -1,17 +1,22 @@
 var mongoose  = require('mongoose') ;
 
 var courseDetailSchema = mongoose.Schema({
-       courseVideoLink:{
+
+       courseDomain : {
           type:String ,
-       }  ,
+       } ,       
 
        courseHeading : {
           type:String ,
        } ,
 
        courseParagraph : {
-         type : String 
-       }
+         type : String , 
+       } ,
+
+       courseVideoLink:{
+         type:String ,
+      }  ,
 })
 
 if(mongoose.models['courseDetails']){
