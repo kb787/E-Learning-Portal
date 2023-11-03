@@ -1,5 +1,5 @@
-import NavBarContent from "../Components/NavBar/NavBarContent"; 
-import Footer from "../Components/Home/components/Footer";
+import NavBarContent from "../NavBar/NavBarContent";
+import Footer from "../Home/components/Footer";
 import {message} from 'antd' ;
 import {useState,useEffect} from 'react' ;
 

@@ -16,8 +16,8 @@ import VideoConference from './Components/VideoConference/VideoConference'
 import AdminLogin from './Components/Admin/AdminLogin'
 import AdminPage from './Components/Admin/AdminPage' 
 import NewVideos from './Components/Admin/NewVideos' 
-import Course1 from './CourseDetail/Course1'
-import CourseDetails from './CourseDetail/CourseDetails'
+import CourseDetails from './Components/CourseDetail/CourseDetails' 
+import Course1 from './Components/CourseDetail/Course1' 
 
 
 const App = () => {
