@@ -40,7 +40,7 @@ const App = () => {
           <Route path='/adminlogin' element={<AdminLogin/>}/>
           <Route path='/adminpage' element={<AdminPage/>}/>
           <Route path='/course1' element={<Course1/>}/>
-          <Route path='/course/:id' element = {CourseDetails} /> 
+          <Route path="/course/:courseDomain" component={<CourseDetails/>} />
 
         </Routes>
       </BrowserRouter>
