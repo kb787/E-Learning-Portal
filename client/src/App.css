@@ -90,4 +90,26 @@
   text-decoration: none;
 }
 
+.Course1 {
+  background-color: rgba(64,64,64,1);
+  color:white ;
+  height:max-content;
+}
+
+.detailHeading {
+  color:white ;
+  font-size:1.20vw ;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  font-style:oblique ;
+}
+
+.detailParagraph {
+  color:white ;
+  font-size:1.10vw ;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  font-style:oblique ;
+}
+
+ 
+
 

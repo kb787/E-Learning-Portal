@@ -17,6 +17,7 @@ import AdminLogin from './Components/Admin/AdminLogin'
 import AdminPage from './Components/Admin/AdminPage' 
 import NewVideos from './Components/Admin/NewVideos' 
 import Course1 from './CourseDetail/Course1'
+import CourseDetails from './CourseDetail/CourseDetails'
 
 
 const App = () => {
@@ -39,6 +40,8 @@ const App = () => {
           <Route path='/adminlogin' element={<AdminLogin/>}/>
           <Route path='/adminpage' element={<AdminPage/>}/>
           <Route path='/course1' element={<Course1/>}/>
+          <Route path='/course/:id' element = {CourseDetails} /> 
+
         </Routes>
       </BrowserRouter>
     </>

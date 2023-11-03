@@ -3,6 +3,7 @@ import './Courses.css'
 import NavBarContent from '../NavBar/NavBarContent'
 import Footer from '../Home/components/Footer'
 import Button from 'react-bootstrap/Button';
+import {Link} from 'react-router-dom' ;
 
 const Courses = () => {
 
@@ -48,7 +49,7 @@ const Courses = () => {
 //  ];
 //  const LogicalSubtopics = [
 //  ];
-
+ 
   const handleSearchInput = async (topic) => {
     try {
         const response = await fetch(`http://localhost:3500/v6/api/search/${topic}`);
@@ -142,19 +143,23 @@ const Courses = () => {
                   :
                   <div className='problem_main'>
                     {
-                      MainData.map((data ) =>
+                      MainData.map((course ) =>
                         <div className="CoursesList_card">
                           <div className="Courses_card_img">
-                            <img src={data.courseUrl}co alt="Course" />
+                            <img src={course.courseUrl}co alt="Course" />
                           </div>
                           <div className="Courses_card_content">
-                            <div className="Courses_card_title">{data.courseTitle}</div>
+                            <div className="Courses_card_title">{course.courseTitle}</div>
                             <div className="Courses_card_description">
-                              {data.courseDescription}
+                              {course.courseDescription}
                             </div>
-                            <div className='Courses_card_rating'>{data.courseRating}</div>
+                            <div className='Courses_card_rating'>{course.courseRating}</div>
                             <br/>
-                            <Button variant="primary" className = 'courseListButton'>Explore More</Button>
+                            <Button variant="primary" className = 'courseListButton'>
+                             <Link to = {`/course/${course.courseDomain}`} className = "detailLinking"> 
+                              Explore More
+                              </Link>
+                              </Button>    
                           </div>
                         </div>
                       )
@@ -166,7 +171,7 @@ const Courses = () => {
         </div>
 
       </section>
-    <Footer/>  
+      <Footer/>
     </>
   )
 }

@@ -19,10 +19,10 @@ var courseDetailSchema = mongoose.Schema({
       }  ,
 })
 
-if(mongoose.models['courseDetails']){
-     return mongoose.model('courseDetails') ;
+if(mongoose.models['coursedetails']){
+     return mongoose.model('coursedetails') ;
 }
 
-var courseDetails = mongoose.model('courseDetails',courseDetailSchema) ;
+var courseDetails = mongoose.model('coursedetails',courseDetailSchema) ;
 
 module.exports = courseDetails ;

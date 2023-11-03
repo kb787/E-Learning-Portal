@@ -68,14 +68,21 @@ const getAllVideoCourse = async (req, res) => {
     }
   };
   
-const getMyCourseDetails = async(req,res) => {
+const getMyCourseDetails = async(req,res,domain) => {
    const {courseDomain,courseHeading,courseParagraph,courseVideoLink} = req.body ;
    try {
-       var myCourseDetails = await courseDetailModel.find({courseDomain:req.body.courseDomain}) ;
-       return res.status(200).send({message:"Object reqcieved",success:true,myCourseDetails}) ;
+       var myCourseDetails = await courseDetailModel.findOne({courseDomain:domain}) ;
+       console.log(myCourseDetails) ;
+       if(myCourseDetails)
+       {
+         return res.send(myCourseDetails) ;
+       }
+       else {
+         return res.status(404).send({message:"Could not find your required object"}) ;
+       }  
    }
    catch(error){
-       return res.status(500).send({message:"Unable to get the object",success:false}) ;
+       return res.status(500).send({message:"Unable to get the object"}) ;
    }
 }  
 
@@ -90,6 +97,24 @@ const getMyQuiz = async(req,res) => {
    catch(error) {
       return res.status(500).send({message:"Could not get the object",success:false}) ;
    } 
+}
+
+const getAllCourseDetails = async(req,res) => {
+  const {courseDomain,courseHeading,courseParagraph,courseVideoLink} = req.body ;
+  try {
+      var myCourseDetails = await courseDetailModel.find() ;
+      console.log(myCourseDetails) ;
+      if(myCourseDetails)
+      {
+        return res.send(myCourseDetails) ;
+      }
+      else {
+        return res.status(404).send({message:"Could not find your required object",success:false}) ;
+      }  
+  }
+  catch(error){
+      return res.status(500).send({message:"Unable to get the object",success:false}) ;
+  }
 }
 
 const handleEventPosting = async (req, res) => {
@@ -189,6 +214,7 @@ var subtopicRouter = express.Router() ;
 var eventRouter = express.Router() ;
 var courseDetailRouter = express.Router() ;
 var courseQuizRouter = express.Router() ;
+var allCourseDetailRouter = express.Router() ;
 
 userProfileRouter.post('/postUserProfile', handleUserProfile);
 userLoginRouter.post('/postUserLogin', handleUserLogin);
@@ -201,5 +227,6 @@ subtopicRouter.get('/filter/:subtopic' ,getSubtopic) ;
 eventRouter.get('/event/getAllevent' , getEventInfo) ;
 courseDetailRouter.get('/getCourseDetail',getMyCourseDetails) ;
 courseQuizRouter.get('/getCourseQuiz',getMyQuiz) ;
+allCourseDetailRouter.get('/getAllDetails',getAllCourseDetails) ;
 
-module.exports = { userProfileRouter, userLoginRouter,subtopicRouter , eventRouter ,videoPostingRouter, videoGetRouter ,searchRouter ,   eventPostingRouter, adminLoginRouter ,courseDetailRouter,courseQuizRouter };
+module.exports = { userProfileRouter, userLoginRouter,subtopicRouter , eventRouter ,videoPostingRouter, videoGetRouter ,searchRouter ,   eventPostingRouter, adminLoginRouter ,courseDetailRouter,courseQuizRouter,allCourseDetailRouter };
