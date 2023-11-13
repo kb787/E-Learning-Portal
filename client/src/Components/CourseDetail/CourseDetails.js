@@ -12,7 +12,7 @@ const CourseDetails = ({match}) => {
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                 var fetchResponse = await fetch(`http://localhost:3500/v8/api/coursedetails/getCourseDetail?domain=${courseDomain}`) ;
+                 var fetchResponse = await fetch(`http://localhost:3500/v8/api/coursedetails/getCourseDetail?domain`) ;
                  var jsonData = await fetchResponse.json() ;
                  if(jsonData) {
                      setMainData(jsonData) ; // directly set jsonData to mainData

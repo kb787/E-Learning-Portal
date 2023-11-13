@@ -68,8 +68,9 @@ const getAllVideoCourse = async (req, res) => {
     }
   };
   
-const getMyCourseDetails = async(req,res,domain) => {
+const getMyCourseDetails = async(req,res) => {
    const {courseDomain,courseHeading,courseParagraph,courseVideoLink} = req.body ;
+   const domain = req.query.domain
    try {
        var myCourseDetails = await courseDetailModel.findOne({courseDomain:domain}) ;
        console.log(myCourseDetails) ;
@@ -88,6 +89,7 @@ const getMyCourseDetails = async(req,res,domain) => {
 
 const getMyQuiz = async(req,res) => {
    const {courseDomain,courseQuizQuestions,courseQuizOptions,courseQuizAnswers} = req.body ;
+   
    try {
        var myQuizObject = await courseQuizModel.find({
            courseDomain:req.body.courseDomain
@@ -225,7 +227,7 @@ videoGetRouter.get('/getAllVideos', getAllVideoCourse) ;
 searchRouter.get('/search/:topic' ,getSearchTopic) ;
 subtopicRouter.get('/filter/:subtopic' ,getSubtopic) ;
 eventRouter.get('/event/getAllevent' , getEventInfo) ;
-courseDetailRouter.get('/getCourseDetail',getMyCourseDetails) ;
+courseDetailRouter.get(`/getCourseDetail/?domain`,getMyCourseDetails) ;
 courseQuizRouter.get('/getCourseQuiz',getMyQuiz) ;
 allCourseDetailRouter.get('/getAllDetails',getAllCourseDetails) ;
 
